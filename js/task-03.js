@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// select container for images
+const galleryContainer = document.querySelector('.gallery');
+
+// iterate each gallery item and create <li><img></li>
+const galleryItems = images
+  .map(
+    ({ url, alt }) =>
+      `<li>
+      <img class="gallery-image" src="${url}" alt="${alt}">
+    </li>`
+  )
+  .join('');
+
+// add all images to the list
+galleryContainer.insertAdjacentHTML('beforeend', galleryItems);
