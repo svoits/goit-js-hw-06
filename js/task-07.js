@@ -4,13 +4,13 @@ const refs = {
   text: document.querySelector('#text'),
 };
 
-// define common font size
+// define common font size when page is loading...
 refs.text.style.fontSize = `${refs.inputRange.value}px`;
 
 // add listener to the input
 refs.inputRange.addEventListener('input', onInputChange);
 
-// function that applies current font size
+// function that applies font size from the input
 function onInputChange() {
   refs.text.style.fontSize = `${refs.inputRange.value}px`;
 }
